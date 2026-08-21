@@ -1,5 +1,7 @@
 # Nuxt Minimal Starter
 
+[![ci](https://github.com/sunjayaali/learn-nuxt/actions/workflows/ci.yaml/badge.svg)](https://github.com/sunjayaali/learn-nuxt/actions/workflows/ci.yaml)
+
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
