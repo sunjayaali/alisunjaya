@@ -3,6 +3,7 @@
 You must generate commit messages following the Conventional Commits format strictly.
 
 ## Format
+
 <type>(<optional-scope>): <short-description-in-imperative-mood>
 
 [optional body describing the 'what' and 'why']
@@ -10,6 +11,7 @@ You must generate commit messages following the Conventional Commits format stri
 [optional footer(s)]
 
 ## Rules
+
 - **Imperative Mood**: Use imperative mode for the subject line (e.g., "Add feature" not "Added feature" or "Adds feature").
 - **Length**: Limit the subject line to 72 characters or fewer.
 - **Casing**: The description must be completely lowercase and do not end with a period.
@@ -17,6 +19,7 @@ You must generate commit messages following the Conventional Commits format stri
 - **Body**: Limit body lines to 72 characters per line. Explain what problem your changes solve and why it solves them, rather than how the code implements it.
 
 ## Allowed Types
+
 - `feat`: A new feature for the application.
 - `fix`: A bug fix.
 - `docs`: Documentation-only changes.
