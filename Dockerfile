@@ -8,6 +8,7 @@ RUN apk add --no-cache \
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 RUN pnpm install --frozen-lockfile
 COPY . .
+RUN pnpm exec nuxt prepare
 RUN pnpm build
 
 FROM node:22-alpine
