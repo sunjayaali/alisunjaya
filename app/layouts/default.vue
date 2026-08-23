@@ -24,10 +24,16 @@ const items = computed<NavigationMenuItem[]>(() => [
         </NuxtLink>
       </template>
 
-      <UNavigationMenu :items="items" variant="link" />
+      <UNavigationMenu
+        :items="items"
+        variant="link"
+      />
 
       <template #body>
-        <UNavigationMenu :items="items" orientation="vertical" />
+        <UNavigationMenu
+          :items="items"
+          orientation="vertical"
+        />
       </template>
 
       <template #right>
