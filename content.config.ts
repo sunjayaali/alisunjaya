@@ -5,6 +5,8 @@ import {
   z,
 } from '@nuxt/content'
 
+const isProduction = process.env.NODE_ENV === 'production'
+
 export default defineContentConfig({
   collections: {
     index: defineCollection({
@@ -43,12 +45,17 @@ export default defineContentConfig({
       }),
     }),
     blog: defineCollection({
-      source: 'blog.yaml',
       type: 'page',
+      source: 'blog.yaml',
     }),
     posts: defineCollection({
       type: 'page',
-      source: 'blog/*.md',
+      source: isProduction
+        ? {
+            repository: 'https://github.com/sunjayaali/learn-nuxt',
+            include: 'content/blog/*.md',
+          }
+        : 'blog/*.md',
       schema: z.object({
         date: z.date(),
         image: z.object({
