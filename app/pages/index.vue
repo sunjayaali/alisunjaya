@@ -4,6 +4,9 @@ import type { ButtonProps } from '@nuxt/ui'
 const { data: page } = await useAsyncData(() =>
   queryCollection('index').first(),
 )
+const { data: posts } = await useAsyncData(() =>
+  queryCollection('posts').order('date', 'DESC').limit(3).all(),
+)
 
 useSeoMeta({
   title: page.value?.seo.title,
@@ -138,6 +141,28 @@ const links = ref<ButtonProps[]>([
           </div>
         </UCard>
       </UPageGrid>
+    </UPageSection>
+
+    <UPageSection
+      :title="page?.blog.title"
+      :description="page?.blog.description"
+    >
+      <UBlogPosts>
+        <UBlogPost
+          v-for="post in posts"
+          :key="post.path"
+          :to="post.path"
+          :title="post.title"
+          :description="post.description"
+          :image="post.image"
+          :date="new Date(post.date)"
+          :badge="{
+            label: post.badge.label,
+            color: 'primary',
+          }"
+          variant="naked"
+        />
+      </UBlogPosts>
     </UPageSection>
   </div>
 </template>
