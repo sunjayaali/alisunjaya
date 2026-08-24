@@ -38,6 +38,10 @@ export default defineContentConfig({
             }),
           ),
         }),
+        blog: z.object({
+          title: z.string(),
+          description: z.string(),
+        }),
       }),
     }),
     blog: defineCollection({
