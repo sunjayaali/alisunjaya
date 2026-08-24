@@ -1,9 +1,5 @@
-import {
-  defineContentConfig,
-  defineCollection,
-  property,
-  z,
-} from '@nuxt/content'
+import { defineContentConfig, defineCollection, property } from '@nuxt/content'
+import { z } from 'zod'
 
 const isProduction = process.env.NODE_ENV === 'production'
 
@@ -15,8 +11,8 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string(),
         description: z.string(),
-        github: z.string().url(),
-        linkedin: z.string().url(),
+        github: z.string(),
+        linkedin: z.string(),
         experience: z.object({
           title: z.string(),
           description: z.string(),
@@ -52,13 +48,13 @@ export default defineContentConfig({
       type: 'page',
       source: isProduction
         ? {
-            repository: 'https://github.com/sunjayaali/learn-nuxt',
+            repository: 'https://github.com/sunjayaali/alisunjaya',
             include: 'content/blog/*.md',
             prefix: '/blog',
           }
         : 'blog/*.md',
       schema: z.object({
-        date: z.date(),
+        date: z.string(),
         image: z.object({
           src: property(z.string()).editor({ input: 'media' }),
         }),
