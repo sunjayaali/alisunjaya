@@ -32,6 +32,10 @@ useSeoMeta({
             :description="post.description"
             :image="post.image"
             :date="new Date(post.date)"
+            :badge="{
+              label: post.badge.label,
+              color: 'primary',
+            }"
             :orientation="index === 0 ? 'horizontal' : 'vertical'"
             :class="[index === 0 && 'col-span-full']"
             variant="naked"
