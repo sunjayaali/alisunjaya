@@ -1,8 +1,17 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/ui', '@nuxt/content', '@nuxt/eslint'],
+  modules: [
+    '@nuxt/ui',
+    '@nuxt/content',
+    '@nuxt/eslint',
+    '@nuxt/scripts',
+    '@nuxtjs/sitemap',
+  ],
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
+  site: {
+    url: 'https://alisunjaya.ioizz.com',
+  },
   compatibilityDate: '2025-07-15',
   typescript: {
     typeCheck: true,
@@ -10,6 +19,11 @@ export default defineNuxtConfig({
   eslint: {
     config: {
       stylistic: true,
+    },
+  },
+  scripts: {
+    registry: {
+      instagramEmbed: {},
     },
   },
 })
