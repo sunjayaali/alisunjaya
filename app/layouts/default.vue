@@ -50,7 +50,7 @@ const items = computed<NavigationMenuItem[]>(() => [
 
       <template #right>
         <UButton
-          icon="i-simple-icons-github"
+          icon="i-lucide-github"
           to="https://github.com/sunjayaali"
           target="_blank"
           variant="ghost"
@@ -59,7 +59,7 @@ const items = computed<NavigationMenuItem[]>(() => [
         />
 
         <UButton
-          icon="i-simple-icons-linkedin"
+          icon="i-lucide-linkedin"
           to="https://www.linkedin.com/in/ali-sunjaya-6b8b54141/"
           target="_blank"
           variant="ghost"
