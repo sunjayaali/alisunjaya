@@ -21,6 +21,11 @@ export default defineNuxtConfig({
       stylistic: true,
     },
   },
+  icon: {
+    clientBundle: {
+      scan: true,
+    },
+  },
   scripts: {
     registry: {
       instagramEmbed: {},
