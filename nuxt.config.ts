@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/scripts',
     '@nuxtjs/sitemap',
+    'nuxt-studio',
   ],
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
@@ -29,6 +30,18 @@ export default defineNuxtConfig({
   scripts: {
     registry: {
       instagramEmbed: {},
+    },
+  },
+  studio: {
+    // Studio admin route (default: '/_studio')
+    // route: '/admin',
+
+    // Git repository configuration (owner and repo are required)
+    repository: {
+      provider: 'github', // 'github' or 'gitlab'
+      owner: 'sunjayaali', // your GitHub/GitLab username or organization
+      repo: 'alisunjaya', // your repository name
+      branch: 'main', // the branch to commit to (default: main)
     },
   },
 })
