@@ -28,43 +28,44 @@ useSeoMeta({
 </script>
 
 <template>
-  <UContainer v-if="project">
-    <UPage>
-      <UPageHero
-        reverse
-        :title="project.title"
-        :description="project.description"
-      >
-        <img :src="project.image.src" :alt="project.image.alt" />
+  <UPageHero
+    v-if="project"
+    reverse
+    :title="project.title"
+    :description="project.description"
+  >
+    <img
+      :src="project.image.src"
+      :alt="project.image.alt"
+      class="rounded-lg shadow-2xl ring ring-default"
+    />
 
-        <template #description>
-          <div class="space-y-4">
-            <p>{{ project.description }}</p>
+    <template #description>
+      <div class="space-y-4">
+        <p>{{ project.description }}</p>
 
-            <div class="flex flex-wrap justify-center gap-2">
-              <UBadge
-                v-for="role in project.roles"
-                :key="role"
-                size="lg"
-                color="neutral"
-                variant="outline"
-                :label="role"
-              />
-            </div>
+        <div class="flex flex-wrap justify-center gap-2">
+          <UBadge
+            v-for="role in project.roles"
+            :key="role"
+            size="lg"
+            color="neutral"
+            variant="outline"
+            :label="role"
+          />
+        </div>
 
-            <USeparator />
+        <USeparator />
 
-            <div class="flex flex-wrap justify-center gap-2">
-              <UBadge
-                v-for="tag in project.tags"
-                :key="tag"
-                :label="tag"
-                variant="subtle"
-              />
-            </div>
-          </div>
-        </template>
-      </UPageHero>
-    </UPage>
-  </UContainer>
+        <div class="flex flex-wrap justify-center gap-2">
+          <UBadge
+            v-for="tag in project.tags"
+            :key="tag"
+            :label="tag"
+            variant="subtle"
+          />
+        </div>
+      </div>
+    </template>
+  </UPageHero>
 </template>
