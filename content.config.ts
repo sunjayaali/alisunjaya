@@ -57,5 +57,22 @@ export default defineContentConfig({
         badge: z.object({ label: z.string().nonempty() }),
       }),
     }),
+    project: defineCollection({
+      type: 'page',
+      source: 'projects.yaml',
+    }),
+    projects: defineCollection({
+      type: 'page',
+      source: 'projects/*.md',
+      schema: z.object({
+        date: z.string(),
+        image: z.object({
+          src: property(z.string()).editor({ input: 'media' }),
+          alt: property(z.string()).editor({ input: 'text' }),
+        }),
+        tags: z.array(z.string()),
+        roles: z.array(z.string()),
+      }),
+    }),
   },
 })

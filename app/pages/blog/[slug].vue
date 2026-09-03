@@ -30,15 +30,9 @@ useSeoMeta({
 <template>
   <UContainer v-if="post">
     <UPage>
-      <UPageHeader
-        :title="post.title"
-        :description="post.description"
-      >
+      <UPageHeader :title="post.title" :description="post.description">
         <template #headline>
-          <UBadge
-            v-bind="post.badge"
-            variant="subtle"
-          />
+          <UBadge v-bind="post.badge" variant="subtle" />
           <span class="text-muted">&middot;</span>
           <time class="text-muted">{{
             new Date(post.date).toLocaleDateString('en', {
@@ -57,10 +51,7 @@ useSeoMeta({
         <UContentSurround :surround="surround" />
       </UPageBody>
 
-      <template
-        v-if="post.body?.toc?.links?.length"
-        #right
-      >
+      <template v-if="post.body?.toc?.links?.length" #right>
         <UContentToc :links="post.body.toc.links" />
       </template>
     </UPage>
