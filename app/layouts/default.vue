@@ -8,6 +8,11 @@ const items = computed<NavigationMenuItem[]>(() => [
     to: '/',
   },
   {
+    label: 'Projects',
+    to: '/projects',
+    active: route.path.startsWith('/projects'),
+  },
+  {
     label: 'Blog',
     to: '/blog',
     active: route.path.startsWith('/blog'),
@@ -18,16 +23,10 @@ const items = computed<NavigationMenuItem[]>(() => [
 <template>
   <div>
     <UHeader title="Ali Sunjaya">
-      <UNavigationMenu
-        :items="items"
-        variant="link"
-      />
+      <UNavigationMenu :items="items" variant="link" />
 
       <template #body>
-        <UNavigationMenu
-          :items="items"
-          orientation="vertical"
-        />
+        <UNavigationMenu :items="items" orientation="vertical" />
       </template>
 
       <template #right>

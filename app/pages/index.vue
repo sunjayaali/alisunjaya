@@ -27,6 +27,15 @@ const links = ref<ButtonProps[]>([
     icon: 'i-lucide-github',
   },
 ])
+
+const projectLinks = ref<ButtonProps[]>([
+  {
+    label: 'Explore projects',
+    to: '/projects',
+    icon: 'i-lucide-arrow-right',
+    color: 'neutral',
+  },
+])
 </script>
 
 <template>
@@ -52,11 +61,14 @@ const links = ref<ButtonProps[]>([
         </div>
       </template>
 
-      <img
-        src="/images/pp.jpg"
-        alt="Description"
-      >
+      <img src="/images/pp.jpg" alt="Description" />
     </UPageHero>
+
+    <UPageSection
+      title="Explore My Projects"
+      description="Take a look at the projects I’ve designed, developed, and contributed to, from web and mobile applications to tools and experiments."
+      :links="projectLinks"
+    />
 
     <UPageSection
       id="experience"
@@ -95,11 +107,7 @@ const links = ref<ButtonProps[]>([
               </ul>
 
               <div class="flex flex-wrap gap-2">
-                <UBadge
-                  v-for="tag in item.tags"
-                  :key="tag"
-                  variant="outline"
-                >
+                <UBadge v-for="tag in item.tags" :key="tag" variant="outline">
                   {{ tag }}
                 </UBadge>
               </div>
@@ -115,15 +123,9 @@ const links = ref<ButtonProps[]>([
       :description="page?.skill.description"
     >
       <UPageGrid>
-        <UCard
-          v-for="skill in page?.skill.items"
-          :key="skill.title"
-        >
+        <UCard v-for="skill in page?.skill.items" :key="skill.title">
           <div class="flex items-center gap-2">
-            <UIcon
-              :name="skill.icon"
-              class="size-5 text-primary"
-            />
+            <UIcon :name="skill.icon" class="size-5 text-primary" />
 
             <h3 class="font-semibold">
               {{ skill.title }}
@@ -131,11 +133,7 @@ const links = ref<ButtonProps[]>([
           </div>
 
           <div class="mt-4 flex flex-wrap gap-2">
-            <UBadge
-              v-for="item in skill.items"
-              :key="item"
-              variant="subtle"
-            >
+            <UBadge v-for="item in skill.items" :key="item" variant="subtle">
               {{ item }}
             </UBadge>
           </div>

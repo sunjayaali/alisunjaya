@@ -17,10 +17,7 @@ useSeoMeta({
 <template>
   <UContainer>
     <UPage>
-      <UPageHeader
-        :title="page?.title"
-        :description="page?.description"
-      />
+      <UPageHeader :title="page?.title" :description="page?.description" />
 
       <UPageBody>
         <UBlogPosts>
