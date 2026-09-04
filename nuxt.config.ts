@@ -12,6 +12,9 @@ export default defineNuxtConfig({
   site: {
     url: 'https://alisunjaya.ioizz.com',
   },
+  experimental: {
+    viewTransition: true,
+  },
   compatibilityDate: '2025-07-15',
   typescript: {
     typeCheck: true,
