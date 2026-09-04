@@ -10,5 +10,10 @@
 
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "file": ".github/skills/git-commit/SKILL.md"
+    }
+  ]
 }
