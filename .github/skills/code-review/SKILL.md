@@ -1,5 +1,5 @@
 ---
-name: review-and-refactor
+name: code-review
 description: 'Review and refactor code in your project according to defined instructions'
 ---
 
