@@ -35,7 +35,9 @@ const items = computed<NavigationMenuItem[]>(() => [
     </UHeader>
 
     <UMain>
-      <slot />
+      <Motion :key="route.path" preset="fade">
+        <slot />
+      </Motion>
     </UMain>
 
     <USeparator />
