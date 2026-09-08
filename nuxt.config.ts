@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/scripts',
     '@nuxtjs/sitemap',
+    '@pinia/nuxt',
   ],
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
