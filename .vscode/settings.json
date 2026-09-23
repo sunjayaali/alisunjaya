@@ -13,7 +13,7 @@
   },
   "github.copilot.chat.commitMessageGeneration.instructions": [
     {
-      "file": ".github/skills/git-commit/SKILL.md"
+      "text": "Use conventional commit format: <type>: <description>. Types: feat, fix, refactor, docs, test, chore, perf, ci. Keep the subject line under 72 characters. Focus on WHY the change was made, not WHAT changed."
     }
   ]
 }
