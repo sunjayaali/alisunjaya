@@ -14,11 +14,6 @@ export default defineNuxtConfig({
   site: {
     url: 'https://alisunjaya.ioizz.com',
   },
-  runtimeConfig: {
-    public: {
-      siteUrl: 'https://alisunjaya.ioizz.com',
-    },
-  },
   compatibilityDate: '2025-07-15',
   typescript: {
     typeCheck: true,
