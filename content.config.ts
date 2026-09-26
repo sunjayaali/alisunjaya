@@ -7,6 +7,10 @@ export default defineContentConfig({
       type: 'page',
       source: 'index.yaml',
       schema: z.object({
+        seo: z.object({
+          title: z.string(),
+          description: z.string(),
+        }),
         title: z.string(),
         description: z.string(),
         github: z.string(),
@@ -53,6 +57,7 @@ export default defineContentConfig({
         date: z.string(),
         image: z.object({
           src: property(z.string()).editor({ input: 'media' }),
+          alt: property(z.string()).editor({ input: 'text' }),
         }),
         badge: z.object({ label: z.string().nonempty() }),
       }),

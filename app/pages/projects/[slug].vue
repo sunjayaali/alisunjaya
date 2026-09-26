@@ -19,11 +19,20 @@ if (!project.value) {
 
 const title = project.value.seo?.title || project.value.title
 const description = project.value.seo?.description || project.value.description
+const imageAlt = project.value.image?.alt || title
+
+defineOgImage('Default', { title, description })
+
 useSeoMeta({
   title,
   ogTitle: title,
   description,
   ogDescription: description,
+  ogType: 'website',
+  ogImageAlt: imageAlt,
+  twitterTitle: title,
+  twitterDescription: description,
+  twitterImageAlt: imageAlt,
 })
 </script>
 

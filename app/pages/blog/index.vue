@@ -6,11 +6,22 @@ const { data: posts } = await useAsyncData('posts', () =>
 const title = page.value?.seo?.title || page.value?.title
 const description = page.value?.seo?.description || page.value?.description
 
+defineOgImage('Default', {
+  title,
+  description,
+  badge: 'Blog',
+})
+
 useSeoMeta({
   title,
   ogTitle: title,
   description,
   ogDescription: description,
+  ogType: 'website',
+  ogImageAlt: `${title} by Ali Sunjaya`,
+  twitterTitle: title,
+  twitterDescription: description,
+  twitterImageAlt: `${title} by Ali Sunjaya`,
 })
 </script>
 

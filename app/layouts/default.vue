@@ -2,6 +2,12 @@
 import type { NavigationMenuItem } from '@nuxt/ui'
 
 const route = useRoute()
+
+useSeoMeta({
+  ogSiteName: 'Ali Sunjaya',
+  twitterCard: 'summary_large_image',
+})
+
 const items = computed<NavigationMenuItem[]>(() => [
   {
     label: 'Home',

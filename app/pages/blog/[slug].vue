@@ -19,11 +19,26 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
 
 const title = post.value.seo?.title || post.value.title
 const description = post.value.seo?.description || post.value.description
+const imageAlt = post.value.image?.alt || title
+
+defineOgImage('Default', {
+  title,
+  description,
+  badge: computed(() => post.value?.badge?.label),
+})
+
 useSeoMeta({
   title,
   ogTitle: title,
   description,
   ogDescription: description,
+  ogType: 'article',
+  ogImageAlt: imageAlt,
+  articlePublishedTime: new Date(post.value.date).toISOString(),
+  articleAuthor: ['Ali Sunjaya'],
+  twitterTitle: title,
+  twitterDescription: description,
+  twitterImageAlt: imageAlt,
 })
 </script>
 

@@ -7,11 +7,17 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@nuxtjs/sitemap',
     '@pinia/nuxt',
+    'nuxt-og-image',
   ],
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
   site: {
     url: 'https://alisunjaya.ioizz.com',
+  },
+  runtimeConfig: {
+    public: {
+      siteUrl: 'https://alisunjaya.ioizz.com',
+    },
   },
   compatibilityDate: '2025-07-15',
   typescript: {

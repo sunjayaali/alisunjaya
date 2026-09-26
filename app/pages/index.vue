@@ -8,11 +8,21 @@ const { data: posts } = await useAsyncData(() =>
   queryCollection('posts').order('date', 'DESC').limit(3).all(),
 )
 
+defineOgImage('Default', {
+  title: computed(() => page.value?.title || 'Ali Sunjaya'),
+  description: computed(() => page.value?.seo?.description),
+})
+
 useSeoMeta({
   title: page.value?.seo.title,
   ogTitle: page.value?.seo.title,
   description: page.value?.seo.description,
   ogDescription: page.value?.seo.description,
+  ogType: 'website',
+  ogImageAlt: 'Ali Sunjaya, Senior Software Engineer',
+  twitterTitle: page.value?.seo.title,
+  twitterDescription: page.value?.seo.description,
+  twitterImageAlt: 'Ali Sunjaya, Senior Software Engineer',
 })
 
 const links = ref<ButtonProps[]>([
