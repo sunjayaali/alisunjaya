@@ -28,21 +28,26 @@ useSeoMeta({
 </script>
 
 <template>
-  <UPageHero
-    v-if="project"
-    reverse
-    :title="project.title"
-    :description="project.description"
-  >
-    <img
-      :src="project.image.src"
-      :alt="project.image.alt"
-      class="rounded-lg shadow-2xl ring ring-default"
-    />
+  <UContainer v-if="project">
+    <UPage>
+      <UPageHeader :title="project.title" :description="project.description">
+        <template #headline>
+          <UButton
+            icon="i-lucide-arrow-left"
+            to="/projects"
+            variant="ghost"
+            color="neutral"
+            label="Back to projects"
+          />
+        </template>
+      </UPageHeader>
 
-    <template #description>
-      <div class="space-y-4">
-        <p>{{ project.description }}</p>
+      <UPageBody>
+        <img
+          :src="project.image.src"
+          :alt="project.image.alt"
+          class="w-full rounded-lg shadow-2xl ring ring-default"
+        />
 
         <div class="flex flex-wrap justify-center gap-2">
           <UBadge
@@ -65,7 +70,7 @@ useSeoMeta({
             variant="subtle"
           />
         </div>
-      </div>
-    </template>
-  </UPageHero>
+      </UPageBody>
+    </UPage>
+  </UContainer>
 </template>

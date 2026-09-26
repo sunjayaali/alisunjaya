@@ -32,6 +32,13 @@ useSeoMeta({
     <UPage>
       <UPageHeader :title="post.title" :description="post.description">
         <template #headline>
+          <UButton
+            icon="i-lucide-arrow-left"
+            to="/blog"
+            variant="ghost"
+            color="neutral"
+            label="Back to blog"
+          />
           <UBadge v-bind="post.badge" variant="subtle" />
           <span class="text-muted">&middot;</span>
           <time class="text-muted">{{
