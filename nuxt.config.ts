@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@nuxtjs/sitemap',
     '@pinia/nuxt',
+    'nuxt-og-image',
   ],
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
