@@ -15,6 +15,7 @@ export default defineContentConfig({
         description: z.string(),
         github: z.string(),
         linkedin: z.string(),
+        email: z.string(),
         experience: z.object({
           title: z.string(),
           description: z.string(),
