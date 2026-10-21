@@ -1,22 +1,21 @@
 seo:
   title: Ali Sunjaya - Senior Software Engineer
   description: |
-    Welcome to my personal website! I'm Ali Sunjaya, a Senior Software Engineer based in Indonesia. I specialize in building scalable and efficient software solutions.
+    Welcome to my personal website! I'm Ali Sunjaya, a senior software engineer based in Indonesia. I specialize in building scalable, efficient software solutions.
 
-title: Hey, I'm Ali Sunjaya Senior Software Engineer
+title: Hey, I'm Ali Sunjaya, a Senior Software Engineer
 description: |
-  I craft innovative and efficient software solutions. Based in Indonesia, bringing ideas to life through code.
-  As a Senior Software Engineer, I have a passion for creating innovative and efficient software solutions. With years of experience in the tech industry, I specialize in building scalable applications that solve real-world problems.
-  My expertise spans across various programming languages and frameworks, allowing me to adapt to different project requirements seamlessly.
+  I'm a senior software engineer based in Indonesia, building innovative and efficient software solutions.
+  With years of experience in the tech industry, I specialize in scalable applications that solve real-world problems. My expertise spans a range of programming languages and frameworks, allowing me to adapt to different project requirements.
 github: https://github.com/sunjayaali
 linkedin: https://www.linkedin.com/in/sunjayaali
 email: ali.sunjayaa@gmail.com
 
 experience:
-  title: Experiences
+  title: Experience
   description: |
-    I have a diverse range of experiences in the tech industry, working on various projects and technologies. From backend development to full-stack engineering, I have contributed to the success of multiple companies and personal projects. 
-    Below is a summary of my professional journey, highlighting my roles, responsibilities, and achievements.
+    I have experience across a range of projects and technologies, from backend development to full-stack engineering. I have contributed to the success of multiple companies and personal projects.
+    Below is a summary of my professional journey, including my roles, responsibilities, and achievements.
   items:
     - date: Jul, 2025 - Present
       title: Ioizz, Jakarta, Indonesia
@@ -30,6 +29,7 @@ experience:
       tags:
         - Go
         - Flutter
+        - Nuxt
         - Grafana
         - Prometheus
         - Loki
@@ -93,7 +93,7 @@ experience:
     - date: Jan, 2018 - Mar, 2019
       title: PT Futuready Insurance Broker, Jakarta, Indonesia
       role: Backend Engineer
-      description: Futuready is an OJK-licensed insurance broker and one of Indonesia’s early online insurance platforms. As a Backend Engineer, I worked on internal applications, partner integrations, and the development of a new serverless core system."
+      description: Futuready is an OJK-licensed insurance broker and one of Indonesia’s early online insurance platforms. As a backend engineer, I worked on internal applications, partner integrations, and the development of a new serverless core system.
       highlights:
         - Developed an internal attendance system that automated employee absence data processing for the HR team.
         - Restructured the UI of internal applications to improve usability and consistency.
@@ -152,6 +152,7 @@ skill:
       icon: i-lucide-layers
       items:
         - Flutter
+        - Nuxt
         - Symfony
         - CodeIgniter
         - Yii2
