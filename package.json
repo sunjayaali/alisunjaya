@@ -22,7 +22,7 @@
     "@pinia/nuxt": "^1.0.2",
     "@resvg/resvg-js": "^2.6.2",
     "@vueuse/motion": "^3.0.3",
-    "nuxt": "^4.5.2",
+    "nuxt": "^4.6.2",
     "nuxt-og-image": "^6.9.0",
     "satori": "^0.33.5",
     "tailwindcss": "^4.3.3",
@@ -39,6 +39,6 @@
     "eslint-plugin-prettier": "^5.5.6",
     "prettier": "^3.9.6",
     "typescript": "npm:@typescript/typescript6@^6.0.2",
-    "vue-tsc": "^3.3.10"
+    "vue-tsc": "^3.3.13"
   }
 }
