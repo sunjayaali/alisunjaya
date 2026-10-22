@@ -9,7 +9,10 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: pnpm/setup@v2
-      - run: pnpm build --preset github_pages
+      - name: Build
+        run: pnpm build --preset github_pages
+        env:
+          NUXT_SITE_URL: https://alisunjaya.ioizz.com
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

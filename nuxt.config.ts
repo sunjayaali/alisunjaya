@@ -12,9 +12,15 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
   site: {
-    url: 'https://alisunjaya.ioizz.com',
+    url: process.env.NUXT_SITE_URL || 'http://localhost:3000',
+  },
+  runtimeConfig: {
+    public: {},
   },
   compatibilityDate: '2025-07-15',
+  nitro: {
+    experimental: { websocket: true },
+  },
   typescript: {
     typeCheck: true,
   },
@@ -32,5 +38,8 @@ export default defineNuxtConfig({
     registry: {
       instagramEmbed: {},
     },
+  },
+  sitemap: {
+    exclude: ['/blank', '/games/*'],
   },
 })
